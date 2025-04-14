@@ -69,3 +69,25 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.bo.commentstring = "// %s"
   end
 })
+
+
+-- Configure diagnostics display
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = true,
+  underline = true,
+  update_in_insert = true,  -- This will show diagnostics even in insert mode
+  severity_sort = true,
+  float = {
+    focusable = false,
+    style = "minimal",
+    border = "rounded",
+    source = "always",
+    header = "",
+    prefix = "",
+  },
+})
+
+-- Set shorter update time for faster diagnostic feedback
+vim.opt.updatetime = 300
+

@@ -55,6 +55,8 @@ return {
 			})
 			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
+                filetypes = {"typescript", "typescriptreact", "typescript.tsx",
+                            "javascript", "javascriptreact"},
 			})
 			lspconfig.zls.setup({
 				capabilities = capabilities,
